@@ -1,0 +1,10 @@
+/home/enzo/ExMetodosVirtuales/ExMetodosVirtuales/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/enzo/ExMetodosVirtuales/ExMetodosVirtuales/obj/x86/Debug/Figuras.Form1.resources
+/home/enzo/ExMetodosVirtuales/ExMetodosVirtuales/obj/x86/Debug/ExMetodosVirtuales.Properties.Resources.resources
+/home/enzo/ExMetodosVirtuales/ExMetodosVirtuales/bin/Debug/ExMetodosVirtuales.exe.config
+/home/enzo/ExMetodosVirtuales/ExMetodosVirtuales/bin/Debug/ExMetodosVirtuales.exe.mdb
+/home/enzo/ExMetodosVirtuales/ExMetodosVirtuales/bin/Debug/ExMetodosVirtuales.pdb
+/home/enzo/ExMetodosVirtuales/ExMetodosVirtuales/bin/Debug/ExMetodosVirtuales.exe
+/home/enzo/ExMetodosVirtuales/ExMetodosVirtuales/obj/x86/Debug/ExMetodosVirtuales.exe
+/home/enzo/ExMetodosVirtuales/ExMetodosVirtuales/obj/x86/Debug/ExMetodosVirtuales.exe.mdb
+/home/enzo/ExMetodosVirtuales/ExMetodosVirtuales/obj/x86/Debug/ExMetodosVirtuales.pdb
