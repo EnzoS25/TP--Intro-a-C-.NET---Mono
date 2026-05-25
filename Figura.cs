@@ -5,6 +5,9 @@ namespace Figuras
 {
     public class Figura
     {
+    	
+    	public Color ColorFigura { get; set; }
+    	
         public virtual void Dibujar(Pen pen, Graphics graphics, int x, int y)
         { 
             
@@ -18,14 +21,17 @@ namespace Figuras
         protected int ancho;
         
         // Constructor
-        public Rectangulo(int ancho, int alto) 
+        public Rectangulo(int ancho, int alto, Color color) 
         {
             this.ancho = ancho;
             this.alto = alto;
+            this.ColorFigura = color;
         }
 
         public override void Dibujar(Pen pen, Graphics graphics, int x, int y)
         {
+            pen.Color = this.ColorFigura;
+            
             Point[] points = new Point[4]
             { 
                 new Point(x,y), 
@@ -41,7 +47,7 @@ namespace Figuras
     public class Cuadrado : Rectangulo
     {
         // Constructor. Un cuadrado es un rectangulo con ancho = alto
-        public Cuadrado(int lado) : base(lado,lado)
+        public Cuadrado(int lado, Color color) : base(lado,lado, color)
         {
         }
     }
@@ -52,13 +58,15 @@ namespace Figuras
         private int radio;
 
         // Constructor
-        public Circulo(int radio)
+        public Circulo(int radio, Color color)
         {
             this.radio= radio;
+            this.ColorFigura = color;
         }
 
         public override void Dibujar(Pen pen, Graphics graphics, int x, int y)
         {
+            pen.Color = this.ColorFigura;
             graphics.DrawEllipse(pen,x,y, radio, radio);
         }
     }

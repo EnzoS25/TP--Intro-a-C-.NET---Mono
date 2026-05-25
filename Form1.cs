@@ -15,9 +15,9 @@ namespace Figuras
             InitializeComponent();
             figuras = new Figura[3] 
             {
-                new Circulo(60),
-                new Rectangulo(30,50),
-                new Cuadrado(45),
+                new Circulo(60, Color.Red),
+                new Rectangulo(30,50, Color.Green),
+                new Cuadrado(45, Color.Blue),
             };
 
         }
