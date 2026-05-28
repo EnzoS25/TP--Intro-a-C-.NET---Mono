@@ -1,27 +1,23 @@
-﻿using System;
+using System;
 using System.Drawing;
 
 namespace Figuras
 {
     public class Figura
     {
-    	
-    	public Color ColorFigura { get; set; }
-    	
+        public Color ColorFigura { get; set; }
+
         public virtual void Dibujar(Pen pen, Graphics graphics, int x, int y)
-        { 
-            
+        {
         }
     }
-
 
     public class Rectangulo : Figura
     {
         protected int alto;
         protected int ancho;
-        
-        // Constructor
-        public Rectangulo(int ancho, int alto, Color color) 
+
+        public Rectangulo(int ancho, int alto, Color color)
         {
             this.ancho = ancho;
             this.alto = alto;
@@ -31,43 +27,38 @@ namespace Figuras
         public override void Dibujar(Pen pen, Graphics graphics, int x, int y)
         {
             pen.Color = this.ColorFigura;
-            
             Point[] points = new Point[4]
-            { 
-                new Point(x,y), 
-                new Point(x+ancho,y), 
-                new Point(x+ancho,y+alto), 
-                new Point(x,y+alto) 
+            {
+                new Point(x, y),
+                new Point(x + ancho, y),
+                new Point(x + ancho, y + alto),
+                new Point(x, y + alto)
             };
-            // DrawPolygon dibuja un poligono dado un conjunto de puntos y un lapiz
             graphics.DrawPolygon(pen, points);
         }
     }
 
     public class Cuadrado : Rectangulo
     {
-        // Constructor. Un cuadrado es un rectangulo con ancho = alto
-        public Cuadrado(int lado, Color color) : base(lado,lado, color)
+        public Cuadrado(int lado, Color color) : base(lado, lado, color)
         {
         }
     }
-
 
     public class Circulo : Figura
     {
         private int radio;
 
-        // Constructor
         public Circulo(int radio, Color color)
         {
-            this.radio= radio;
+            this.radio = radio;
             this.ColorFigura = color;
         }
 
         public override void Dibujar(Pen pen, Graphics graphics, int x, int y)
         {
             pen.Color = this.ColorFigura;
-            graphics.DrawEllipse(pen,x,y, radio, radio);
+            graphics.DrawEllipse(pen, x, y, radio, radio);
         }
     }
 }
