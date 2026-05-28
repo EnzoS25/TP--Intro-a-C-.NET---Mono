@@ -1,5 +1,7 @@
 # TP Especial: Intro a C# / .NET - Mono
 
+## Integrantes: Enzo Sabatino y Felipe Medina Chaves 
+
 Trabajo práctico basado en el proyecto de ejemplo de métodos virtuales visto en clases teóricas.
 Compilado y ejecutado en Linux (Ubuntu) con Mono.
 
