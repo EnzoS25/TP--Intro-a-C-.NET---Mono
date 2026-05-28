@@ -9,17 +9,19 @@ namespace Figuras
         private Figura[] figuras;
 
         public Form1()
-        {
-            InitializeComponent();
-            Random rnd = new Random();
+	{
+    		InitializeComponent();
+    		Random rnd = new Random();
 
-            figuras = new Figura[3]
-            {
-                new Circulo(60,        GenerarColorConContraste(rnd)),
-                new Rectangulo(30, 50, GenerarColorConContraste(rnd)),
-                new Cuadrado(45,       GenerarColorConContraste(rnd)),
-            };
-        }
+    		int tamBase = 40;
+
+		figuras = new Figura[3]
+		{
+		new Circulo(tamBase * 1,        GenerarColorConContraste(rnd)),  // 40
+		new Rectangulo(tamBase, tamBase * 2, GenerarColorConContraste(rnd)),  // 80
+		new Cuadrado(tamBase * 3,       GenerarColorConContraste(rnd)),  // 120
+    };
+}
 
         private Color GenerarColorConContraste(Random rnd)
         {
@@ -39,14 +41,16 @@ namespace Figuras
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            Graphics gr = pictureBox1.CreateGraphics();
-            Pen pen = new Pen(Color.Black);
+	{
+	    Graphics gr = pictureBox1.CreateGraphics();
+	    Pen pen = new Pen(Color.Black);
 
-            for (int i = 0; i < figuras.Length; i++)
-            {
-                figuras[i].Dibujar(pen, gr, i * 100, 50);
-            }
-        }
+	    int offsetX = 10;
+	    for (int i = 0; i < figuras.Length; i++)
+	    {
+		figuras[i].Dibujar(pen, gr, offsetX, 20);
+		offsetX += 40 * (i + 2);
+    		}
+	}
     }
 }
