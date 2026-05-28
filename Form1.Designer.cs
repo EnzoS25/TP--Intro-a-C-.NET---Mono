@@ -35,7 +35,7 @@
             // 
             // dibujarButton
             // 
-            this.dibujarButton.Location = new System.Drawing.Point(500, 234);
+            this.dibujarButton.Location = new System.Drawing.Point(400, 240);
             this.dibujarButton.Name = "dibujarButton";
             this.dibujarButton.Size = new System.Drawing.Size(75, 23);
             this.dibujarButton.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(59, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(365, 227);
+	    this.pictureBox1.Size = new System.Drawing.Size(700, 200);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 

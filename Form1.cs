@@ -15,12 +15,14 @@ namespace Figuras
 
     		int tamBase = 40;
 
-		figuras = new Figura[3]
+		figuras = new Figura[5]
 		{
-		new Circulo(tamBase * 1,        GenerarColorConContraste(rnd)),  // 40
-		new Rectangulo(tamBase, tamBase * 2, GenerarColorConContraste(rnd)),  // 80
-		new Cuadrado(tamBase * 3,       GenerarColorConContraste(rnd)),  // 120
-    };
+		    new Circulo(tamBase * 1,                          GenerarColorConContraste(rnd)),
+		    new Rectangulo(tamBase, tamBase * 2,          GenerarColorConContraste(rnd)),
+		    new Cuadrado(tamBase * 3,                         GenerarColorConContraste(rnd)),
+		    new TrianguloEquilatero(tamBase * 2,              GenerarColorConContraste(rnd)),
+		    new TrianguloIsosceles(tamBase * 2, tamBase * 3,  GenerarColorConContraste(rnd)),
+		};
 }
 
         private Color GenerarColorConContraste(Random rnd)
